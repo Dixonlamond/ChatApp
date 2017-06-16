@@ -21,8 +21,14 @@ class ViewController: UITableViewController {
   
   func handleLogout()
   {
-    // none
+    let logincontroller = LoginControlller()
+    
+    present(logincontroller, animated: true, completion: nil)
   }
-
+  override func preferredStatusBarStyle() -> UIStatusBarStyle
+  {
+    return .lightContent
+  }
+  
 }
 
