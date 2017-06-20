@@ -12,23 +12,19 @@ class ViewController: UITableViewController {
 
   
   
-  override func viewDidLoad()
-  {
+  override func viewDidLoad() {
     super.viewDidLoad()
     
     navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
   }
   
-  func handleLogout()
-  {
+  func handleLogout() {
     let logincontroller = LoginControlller()
     
     present(logincontroller, animated: true, completion: nil)
   }
-  override func preferredStatusBarStyle() -> UIStatusBarStyle
-  {
+   func preferredStatusBarStyle() -> UIStatusBarStyle {
     return .lightContent
   }
-  
 }
 
