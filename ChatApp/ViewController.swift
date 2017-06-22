@@ -23,8 +23,14 @@ class ViewController: UITableViewController {
     
     present(logincontroller, animated: true, completion: nil)
   }
-   func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return .lightContent
+  
+  enum UIStatusBarStyle : Int {
+    case Default
+    case LightContent
   }
+  
+//   func preferredStatusBarStyle() -> UIStatusBarStyle {
+//    return .lightContent
+  
 }
 
