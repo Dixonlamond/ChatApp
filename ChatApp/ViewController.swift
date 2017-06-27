@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UITableViewController {
 
@@ -14,6 +15,9 @@ class ViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+//    var storage = Storage.storage()
+//    storage = Storage.storage(url:"https://chatapp-43b78.firebaseio.com/")
     
     navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
   }

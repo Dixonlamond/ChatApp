@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginControlller: UIViewController {
   
@@ -26,8 +27,15 @@ class LoginControlller: UIViewController {
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitleColor(UIColor.white, for: .normal)
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+    
+    button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
     return button
   }()
+  
+  func handleRegister() {
+    Auth.auth()
+    print(123)
+  }
   
   let nameTextField: UITextField = {
     let textField = UITextField()
