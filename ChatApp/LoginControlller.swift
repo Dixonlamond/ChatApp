@@ -33,8 +33,20 @@ class LoginControlller: UIViewController {
   }()
   
   func handleRegister() {
-    Auth.auth()
-    print(123)
+    guard let email = emailTextField.text, let password = passwordTextField.text
+      else {
+      print("Form Is Not Valid")
+        return
+    }
+    Auth.auth().createUser(withEmail: email, password: password, completion: { ( user: User?, error) in
+      
+      if error != nil {
+        print("Sorry")
+        return
+      }
+      //successfully authenticated user
+      
+    })
   }
   
   let nameTextField: UITextField = {
